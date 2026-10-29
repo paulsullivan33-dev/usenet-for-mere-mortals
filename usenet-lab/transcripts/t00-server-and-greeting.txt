@@ -1,0 +1,27 @@
+$ python3 lab_nntp_server.py --spool ./spool --port 11119 &
+lab NNTP server listening on 127.0.0.1:11119, spool /home/hatch/workspace/usenet-lab-work/spool
+
+$ python3 raw_session.py CAPABILITIES DATE HELP QUIT
+S: 200 lab.invalid lab NNTP server ready (posting ok)
+C: CAPABILITIES
+S: 101 Capability list:
+S: VERSION 2
+S: READER
+S: POST
+S: OVER
+S: LIST ACTIVE ACTIVE.TIMES NEWSGROUPS OVERVIEW.FMT
+S: .
+C: DATE
+S: 111 20261029195337
+C: HELP
+S: 100 Help text follows
+S: Commands understood:
+S:   CAPABILITIES            MODE READER          DATE
+S:   LIST [ACTIVE|NEWSGROUPS|OVERVIEW.FMT|ACTIVE.TIMES]
+S:   GROUP <name>            LISTGROUP [<name>]
+S:   ARTICLE|HEAD|BODY|STAT [<number>|<message-id>]
+S:   NEXT  LAST              OVER <range>         XOVER <range>
+S:   POST                    QUIT                 HELP
+S: .
+C: QUIT
+S: 205 Closing connection. Goodbye.

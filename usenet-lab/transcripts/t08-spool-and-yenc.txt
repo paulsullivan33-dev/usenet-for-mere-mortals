@@ -1,0 +1,43 @@
+$ ls spool/ spool/lab.knitting/ spool/lab.binaries/
+spool/:
+lab.announce
+lab.archive
+lab.binaries
+lab.general
+lab.knitting
+lab.recipes
+lab.test
+
+spool/lab.binaries/:
+1.txt
+2.txt
+3.txt
+4.txt
+5.txt
+6.txt
+
+spool/lab.knitting/:
+1.txt
+2.txt
+
+$ python3 raw_session.py "GROUP lab.binaries" "ARTICLE 4" QUIT
+S: 200 lab.invalid lab NNTP server ready (posting ok)
+C: GROUP lab.binaries
+S: 211 6 1 6 lab.binaries
+C: ARTICLE 4
+S: 220 4 <lab-1793303697-6@lab.invalid> Article follows
+S: From: Sam Keeper <sam@lab.invalid>
+S: Subject: harbour-chart.bin [1/3]
+S: Newsgroups: lab.binaries
+S: Message-ID: <lab-1793303697-6@lab.invalid>
+S: Date: Thu, 29 Oct 2026 19:54:57 -0000
+S: 
+S: =ybegin part=1 line=128 size=900 name=harbour-chart.bin
+S: =ypart begin=1 end=300
+S: 5Z¤Éî8]§Ìñ;`ªÏô>c­Ò÷Af°ÕúDi³Øý"Gl¶Û=@%Jo¹Þ(Mr¼á+Pu¿ä=I=nSxÂç1V{ Åê4Y~£Èí7\¦Ëð:_©Îó=}b¬Ñö@e¯ÔùCh²×ü
+S: !FkµÚÿ$In¸Ý'Lq»à*Ot¾ã-RwÁæ0UzÄé3X}¢Çì6[¥Êï9^¨Íò<a«Ðõ?d®ÓøBg±Öû=`Ej´Ùþ#Hm·Ü&Kpºß)Ns½â,QvÀå=J/TyÃè=M
+S: 2W|¡Æë5Z¤Éî8]§Ìñ;`ªÏô>c­Ò÷Af°ÕúDi³Øý"Gl
+S: =yend size=300 part=1 pcrc32=32ec5e76
+S: .
+C: QUIT
+S: 205 Closing connection. Goodbye.

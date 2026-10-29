@@ -1,0 +1,53 @@
+$ python3 raw_session.py "GROUP lab.nosuchgroup" "GROUP lab.knitting" "ARTICLE 99" "ARTICLE <nobody@lab.invalid>" "POST archive-post.txt" "POST post-badgroup.txt" "POST post-nosubject.txt" FROBNICATE QUIT
+S: 200 lab.invalid lab NNTP server ready (posting ok)
+C: GROUP lab.nosuchgroup
+S: 411 No such newsgroup
+C: GROUP lab.knitting
+S: 211 2 1 2 lab.knitting
+C: ARTICLE 99
+S: 423 No such article number in this group
+C: ARTICLE <nobody@lab.invalid>
+S: 430 No such article found
+C: POST
+S: 340 Send article, end with a line holding one dot
+C: From: Sam Keeper <sam@lab.invalid>
+C: Subject: Thread: the spring swap meet (closed)
+C: Newsgroups: lab.archive
+C: 
+C: This thread discussed the spring swap meet. The meet has
+C: happened and the thread is closed, so the article lives in
+C: the archive group, which anyone may read and nobody may
+C: post to.
+C: .
+S: 440 Posting not allowed in lab.archive
+C: POST
+S: 340 Send article, end with a line holding one dot
+C: From: Alex Rivers <alex@example.org>
+C: Subject: A post to a group that is not there
+C: Newsgroups: lab.nosuchgroup
+C: 
+C: This article names a group the server does not carry.
+C: The server reads the whole post, then refuses it.
+C: .
+S: 441 Posting failed: unknown group lab.nosuchgroup
+C: POST
+S: 340 Send article, end with a line holding one dot
+C: From: Alex Rivers <alex@example.org>
+C: Newsgroups: lab.test
+C: 
+C: This article has no Subject: header at all.
+C: The server requires From:, Subject: and Newsgroups:,
+C: and refuses the post without one.
+C: .
+S: 441 Posting failed: no Subject: header
+C: FROBNICATE
+S: 500 Command not recognised
+C: QUIT
+S: 205 Closing connection. Goodbye.
+
+$ python3 raw_session.py "ARTICLE 1" QUIT   (a fresh connection, no group chosen yet)
+S: 200 lab.invalid lab NNTP server ready (posting ok)
+C: ARTICLE 1
+S: 412 No newsgroup selected
+C: QUIT
+S: 205 Closing connection. Goodbye.

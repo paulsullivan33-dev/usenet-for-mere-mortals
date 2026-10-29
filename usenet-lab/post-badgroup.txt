@@ -1,0 +1,6 @@
+From: Alex Rivers <alex@example.org>
+Subject: A post to a group that is not there
+Newsgroups: lab.nosuchgroup
+
+This article names a group the server does not carry.
+The server reads the whole post, then refuses it.

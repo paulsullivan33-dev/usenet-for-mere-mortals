@@ -1,0 +1,7 @@
+From: Priya Nair <priya@example.org>
+Subject: Swap meet and bake sale, same Saturday
+Newsgroups: lab.general, lab.recipes
+
+One article, two groups: this post was cross-posted to
+lab.general and lab.recipes at once. It has one message-id
+and lives under a different article number in each group.

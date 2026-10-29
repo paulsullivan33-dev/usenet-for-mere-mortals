@@ -1,0 +1,17 @@
+$ python3 seed_lab.py
+server greeting: 200 lab.invalid lab NNTP server ready (posting ok)
+posted: Subject: Welcome to the lab news server -> 240 Article received <lab-1793303627-1@lab.invalid>
+posted: Subject: Choosing needles for a first jumper -> 240 Article received <lab-1793303627-2@lab.invalid>
+posted: Subject: Re: Choosing needles for a first jumper -> 240 Article received <lab-1793303627-3@lab.invalid>
+posted: Subject: A plain loaf that always works -> 240 Article received <lab-1793303627-4@lab.invalid>
+posting to lab.archive refused, as designed: 440 Posting not allowed in lab.archive
+the keeper files archive material directly instead
+(see file_to_archive.py)
+done
+
+$ kill %1   (stop the server; the spool is only re-read at startup)
+$ python3 file_to_archive.py archive-post.txt ./spool
+filed into lab.archive as <lab-1793303636-1@lab.invalid>
+$ python3 lab_nntp_server.py --spool ./spool --port 11119 &
+lab NNTP server listening on 127.0.0.1:11119, spool /home/hatch/workspace/usenet-lab-work/spool
+Terminated

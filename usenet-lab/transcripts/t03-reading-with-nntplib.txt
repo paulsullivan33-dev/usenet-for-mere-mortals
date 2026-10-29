@@ -1,0 +1,46 @@
+$ python3 read_with_nntplib.py
+greeting: 200 lab.invalid lab NNTP server ready (posting ok)
+
+groups on this server:
+  lab.announce   last=1 first=1 posting=y
+  lab.archive    last=1 first=1 posting=n
+  lab.binaries   last=0 first=0 posting=y
+  lab.general    last=0 first=0 posting=y
+  lab.knitting   last=2 first=1 posting=y
+  lab.recipes    last=1 first=1 posting=y
+  lab.test       last=0 first=0 posting=y
+
+entered lab.knitting: 2 articles, numbers 1 to 2
+
+overview (one line per article, no bodies):
+  1 | Choosing needles for a first jumper | Alex Rivers <alex@example.org>
+  2 | Re: Choosing needles for a first jumper | Jo Field <jo@example.net>
+
+article 1 in full:
+  From: Alex Rivers <alex@example.org>
+  Subject: Choosing needles for a first jumper
+  Newsgroups: lab.knitting
+  Message-ID: <lab-1793303627-2@lab.invalid>
+  Date: Thu, 29 Oct 2026 19:53:47 -0000
+  
+  I am about to start my first jumper and the pattern just says
+  "4 mm needles". The shop has straight pairs, circulars, and
+  double-pointed sets, all in 4 mm. Does the shape matter, or
+  only the size?
+  
+  The wool is an ordinary double-knitting yarn, if that helps.
+
+head of article 1 (headers only):
+  From: Alex Rivers <alex@example.org>
+  Subject: Choosing needles for a first jumper
+  Newsgroups: lab.knitting
+  Message-ID: <lab-1793303627-2@lab.invalid>
+  Date: Thu, 29 Oct 2026 19:53:47 -0000
+
+body of article 1 (body only):
+  I am about to start my first jumper and the pattern just says
+  "4 mm needles". The shop has straight pairs, circulars, and
+  double-pointed sets, all in 4 mm. Does the shape matter, or
+  only the size?
+  
+  The wool is an ordinary double-knitting yarn, if that helps.

@@ -1,0 +1,32 @@
+$ mkdir nzb-run && cd nzb-run
+$ python3 ../nzb_round_trip.py
+made harbour-chart.bin: 900 bytes
+sha256 of the original: 4544d9aaef92b51c22291c2f127ed18a6cfd21e6cbe2c0c69207bb2384bcc788
+posted segment 1/3 as <lab-1793303697-6@lab.invalid>
+posted segment 2/3 as <lab-1793303697-7@lab.invalid>
+posted segment 3/3 as <lab-1793303697-8@lab.invalid>
+
+wrote harbour-chart.bin.nzb:
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nzb PUBLIC "-//newzBin//DTD NZB 2.0//EN" "http://www.newzbin.com/DTD/nzb/nzb-2.0.dtd">
+<nzb xmlns="http://www.newzbin.com/DTD/2003/nzb">
+  <file poster="Sam Keeper &lt;sam@lab.invalid&gt;" date="1759000000" subject="harbour-chart.bin [3/3]">
+    <groups>
+      <group>lab.binaries</group>
+    </groups>
+    <segments>
+      <segment bytes="426" number="1">lab-1793303697-6@lab.invalid</segment>
+      <segment bytes="431" number="2">lab-1793303697-7@lab.invalid</segment>
+      <segment bytes="429" number="3">lab-1793303697-8@lab.invalid</segment>
+    </segments>
+  </file>
+</nzb>
+
+forgetting the original; fetching from the NZB alone
+fetched segment 1 (<lab-1793303697-6@lab.invalid>): 300 bytes, part CRC ok
+fetched segment 2 (<lab-1793303697-7@lab.invalid>): 300 bytes, part CRC ok
+fetched segment 3 (<lab-1793303697-8@lab.invalid>): 300 bytes, part CRC ok
+
+sha256 of the rebuilt file: 4544d9aaef92b51c22291c2f127ed18a6cfd21e6cbe2c0c69207bb2384bcc788
+MATCH
+exit code: 0

@@ -1,0 +1,50 @@
+$ python3 raw_session.py "LIST ACTIVE" "LIST NEWSGROUPS" "LIST OVERVIEW.FMT" "LIST ACTIVE.TIMES" "GROUP lab.knitting" "LISTGROUP lab.archive" QUIT
+S: 200 lab.invalid lab NNTP server ready (posting ok)
+C: LIST ACTIVE
+S: 215 List of newsgroups follows
+S: lab.announce 1 1 y
+S: lab.archive 1 1 n
+S: lab.binaries 0 0 y
+S: lab.general 0 0 y
+S: lab.knitting 2 1 y
+S: lab.recipes 1 1 y
+S: lab.test 0 0 y
+S: .
+C: LIST NEWSGROUPS
+S: 215 Descriptions of newsgroups follow
+S: lab.announce	Announcements from the keeper of this lab server
+S: lab.archive	Read-only archive of finished threads
+S: lab.binaries	Small binary postings for the lab (see the NZB chapter)
+S: lab.general	General discussion on the lab network
+S: lab.knitting	Knitting: patterns, yarn and works in progress
+S: lab.recipes	Recipes and kitchen notes
+S: lab.test	Test posts live here. Post as much as you like
+S: .
+C: LIST OVERVIEW.FMT
+S: 215 Overview format follows
+S: Subject:
+S: From:
+S: Date:
+S: Message-ID:
+S: References:
+S: :bytes
+S: :lines
+S: .
+C: LIST ACTIVE.TIMES
+S: 215 Active times follow
+S: lab.announce 1759000000 sam@lab.invalid
+S: lab.archive 1759000000 sam@lab.invalid
+S: lab.binaries 1759000000 sam@lab.invalid
+S: lab.general 1759000000 sam@lab.invalid
+S: lab.knitting 1759000000 sam@lab.invalid
+S: lab.recipes 1759000000 sam@lab.invalid
+S: lab.test 1759000000 sam@lab.invalid
+S: .
+C: GROUP lab.knitting
+S: 211 2 1 2 lab.knitting
+C: LISTGROUP lab.archive
+S: 211 1 1 1 lab.archive
+S: 1
+S: .
+C: QUIT
+S: 205 Closing connection. Goodbye.

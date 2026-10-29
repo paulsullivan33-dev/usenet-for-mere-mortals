@@ -1,0 +1,6 @@
+From: Alex Rivers <alex@example.org>
+Newsgroups: lab.test
+
+This article has no Subject: header at all.
+The server requires From:, Subject: and Newsgroups:,
+and refuses the post without one.

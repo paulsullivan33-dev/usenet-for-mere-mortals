@@ -1,0 +1,25 @@
+site_name: Usenet for Mere Mortals
+site_description: The Usenet discussion network explained in plain language. Newsgroups and their hierarchies, the NNTP protocol spoken by hand against a real server, reading and posting, and how NZB files turn posted articles back into whole files, with the limits stated plainly.
+site_url: https://paulsullivan33-dev.github.io/usenet-for-mere-mortals/
+copyright: 'Part of <a href="https://paulsullivan33-dev.github.io/mere-mortals/">For Mere Mortals</a> · Text <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, code MIT'
+
+# Guides live at the repo root (nice for GitHub browsing).
+# The deploy workflow copies them into docs/ before building.
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - What Usenet Is: what-usenet-is.md
+  - The Moving Parts: the-moving-parts.md
+  - Getting Access: getting-access.md
+  - Your First Groups: your-first-groups.md
+  - Newsgroups and Hierarchies: newsgroups-and-hierarchies.md
+  - Binaries and NZB: binaries-and-nzb.md
+  - Etiquette and Safety: etiquette-and-safety.md
+  - Recipes: recipes.md
+  - The Neighbours: the-neighbours.md
+  - Limits: limits.md
+  - Troubleshooting: troubleshooting.md
+  - Glossary: glossary.md
+  - Writing Criteria: criteria.md

@@ -1,0 +1,10 @@
+From: Alex Rivers <alex@example.org>
+Subject: A first post sent by hand
+Newsgroups: lab.test
+
+This article was posted by hand, one line at a time, in the
+raw protocol. The next line begins with a dot:
+
+.This line starts with a dot in the body.
+
+On the wire it travels doubled, and the reader sees it whole.

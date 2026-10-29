@@ -1,0 +1,40 @@
+$ python3 raw_session.py "GROUP lab.knitting" STAT NEXT "ARTICLE <lab-1793303627-2@lab.invalid>" STAT LAST NEXT "OVER 1-2" "XOVER 2" QUIT
+S: 200 lab.invalid lab NNTP server ready (posting ok)
+C: GROUP lab.knitting
+S: 211 2 1 2 lab.knitting
+C: STAT
+S: 223 1 <lab-1793303627-2@lab.invalid>
+C: NEXT
+S: 223 2 <lab-1793303627-3@lab.invalid>
+C: ARTICLE <lab-1793303627-2@lab.invalid>
+S: 220 1 <lab-1793303627-2@lab.invalid> Article follows
+S: From: Alex Rivers <alex@example.org>
+S: Subject: Choosing needles for a first jumper
+S: Newsgroups: lab.knitting
+S: Message-ID: <lab-1793303627-2@lab.invalid>
+S: Date: Thu, 29 Oct 2026 19:53:47 -0000
+S: 
+S: I am about to start my first jumper and the pattern just says
+S: "4 mm needles". The shop has straight pairs, circulars, and
+S: double-pointed sets, all in 4 mm. Does the shape matter, or
+S: only the size?
+S: 
+S: The wool is an ordinary double-knitting yarn, if that helps.
+S: .
+C: STAT
+S: 223 2 <lab-1793303627-3@lab.invalid>
+C: LAST
+S: 223 1 <lab-1793303627-2@lab.invalid>
+C: NEXT
+S: 223 2 <lab-1793303627-3@lab.invalid>
+C: OVER 1-2
+S: 224 Overview information follows
+S: 1	Choosing needles for a first jumper	Alex Rivers <alex@example.org>	Thu, 29 Oct 2026 19:53:47 -0000	<lab-1793303627-2@lab.invalid>		447	6
+S: 2	Re: Choosing needles for a first jumper	Jo Field <jo@example.net>	Thu, 29 Oct 2026 19:53:47 -0000	<lab-1793303627-3@lab.invalid>	<lab-1793303627-2@lab.invalid>	482	7
+S: .
+C: XOVER 2
+S: 224 Overview information follows
+S: 2	Re: Choosing needles for a first jumper	Jo Field <jo@example.net>	Thu, 29 Oct 2026 19:53:47 -0000	<lab-1793303627-3@lab.invalid>	<lab-1793303627-2@lab.invalid>	482	7
+S: .
+C: QUIT
+S: 205 Closing connection. Goodbye.

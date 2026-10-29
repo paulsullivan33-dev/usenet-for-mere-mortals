@@ -1,0 +1,101 @@
+$ python3 raw_session.py "POST post-test.txt" "GROUP lab.test" "ARTICLE 1" QUIT
+S: 200 lab.invalid lab NNTP server ready (posting ok)
+C: POST
+S: 340 Send article, end with a line holding one dot
+C: From: Alex Rivers <alex@example.org>
+C: Subject: A first post sent by hand
+C: Newsgroups: lab.test
+C: 
+C: This article was posted by hand, one line at a time, in the
+C: raw protocol. The next line begins with a dot:
+C: 
+C: ..This line starts with a dot in the body.   (dot-stuffed)
+C: 
+C: On the wire it travels doubled, and the reader sees it whole.
+C: .
+S: 240 Article received <lab-1793303656-1@lab.invalid>
+C: GROUP lab.test
+S: 211 1 1 1 lab.test
+C: ARTICLE 1
+S: 220 1 <lab-1793303656-1@lab.invalid> Article follows
+S: From: Alex Rivers <alex@example.org>
+S: Subject: A first post sent by hand
+S: Newsgroups: lab.test
+S: Message-ID: <lab-1793303656-1@lab.invalid>
+S: Date: Thu, 29 Oct 2026 19:54:16 -0000
+S: 
+S: This article was posted by hand, one line at a time, in the
+S: raw protocol. The next line begins with a dot:
+S: 
+S: .This line starts with a dot in the body.
+S: 
+S: On the wire it travels doubled, and the reader sees it whole.
+S: .
+C: QUIT
+S: 205 Closing connection. Goodbye.
+
+$ python3 raw_session.py "POST post-cross.txt" "GROUP lab.general" "ARTICLE 1" "GROUP lab.recipes" "ARTICLE 2" QUIT
+S: 200 lab.invalid lab NNTP server ready (posting ok)
+C: POST
+S: 340 Send article, end with a line holding one dot
+C: From: Priya Nair <priya@example.org>
+C: Subject: Swap meet and bake sale, same Saturday
+C: Newsgroups: lab.general, lab.recipes
+C: 
+C: One article, two groups: this post was cross-posted to
+C: lab.general and lab.recipes at once. It has one message-id
+C: and lives under a different article number in each group.
+C: .
+S: 240 Article received <lab-1793303668-2@lab.invalid>
+C: GROUP lab.general
+S: 211 1 1 1 lab.general
+C: ARTICLE 1
+S: 220 1 <lab-1793303668-2@lab.invalid> Article follows
+S: From: Priya Nair <priya@example.org>
+S: Subject: Swap meet and bake sale, same Saturday
+S: Newsgroups: lab.general, lab.recipes
+S: Message-ID: <lab-1793303668-2@lab.invalid>
+S: Date: Thu, 29 Oct 2026 19:54:28 -0000
+S: 
+S: One article, two groups: this post was cross-posted to
+S: lab.general and lab.recipes at once. It has one message-id
+S: and lives under a different article number in each group.
+S: .
+C: GROUP lab.recipes
+S: 211 2 1 2 lab.recipes
+C: ARTICLE 2
+S: 220 2 <lab-1793303668-2@lab.invalid> Article follows
+S: From: Priya Nair <priya@example.org>
+S: Subject: Swap meet and bake sale, same Saturday
+S: Newsgroups: lab.general, lab.recipes
+S: Message-ID: <lab-1793303668-2@lab.invalid>
+S: Date: Thu, 29 Oct 2026 19:54:28 -0000
+S: 
+S: One article, two groups: this post was cross-posted to
+S: lab.general and lab.recipes at once. It has one message-id
+S: and lives under a different article number in each group.
+S: .
+C: QUIT
+S: 205 Closing connection. Goodbye.
+
+$ python3 raw_session.py "ARTICLE <lab-1793303656-1@lab.invalid>" "STAT <lab-1793303656-1@lab.invalid>" QUIT
+S: 200 lab.invalid lab NNTP server ready (posting ok)
+C: ARTICLE <lab-1793303656-1@lab.invalid>
+S: 220 1 <lab-1793303656-1@lab.invalid> Article follows
+S: From: Alex Rivers <alex@example.org>
+S: Subject: A first post sent by hand
+S: Newsgroups: lab.test
+S: Message-ID: <lab-1793303656-1@lab.invalid>
+S: Date: Thu, 29 Oct 2026 19:54:16 -0000
+S: 
+S: This article was posted by hand, one line at a time, in the
+S: raw protocol. The next line begins with a dot:
+S: 
+S: .This line starts with a dot in the body.
+S: 
+S: On the wire it travels doubled, and the reader sees it whole.
+S: .
+C: STAT <lab-1793303656-1@lab.invalid>
+S: 223 1 <lab-1793303656-1@lab.invalid>
+C: QUIT
+S: 205 Closing connection. Goodbye.
